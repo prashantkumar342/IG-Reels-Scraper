@@ -4,6 +4,9 @@ import { scrapeReels } from "../controller/scrapeReels.js";
 
 
 const router = Router();
+router.get("/", async (req, res) => {
+  res.status(200).json("wellcome to ReelScrapper")
+})
 
 router.get("/scrape", async (req, res) => {
   const { username, limit = 5 } = req.query;
